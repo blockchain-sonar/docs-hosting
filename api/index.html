@@ -1,0 +1,926 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>API - Blockchain Sonar Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2094f3">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/font-awesome.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Blockchain Sonar Documentation" class="md-header-nav__button md-logo" aria-label="Blockchain Sonar Documentation">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Blockchain Sonar Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Blockchain Sonar Documentation" class="md-nav__button md-logo" aria-label="Blockchain Sonar Documentation">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    Blockchain Sonar Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../rate-limits/" title="Rate Limits" class="md-nav__link">
+      Rate Limits
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../changelog/" title="Change Log" class="md-nav__link">
+      Change Log
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../blockchains-supported/" title="Blockchains Supported" class="md-nav__link">
+      Blockchains Supported
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="API" class="md-nav__link md-nav__link--active">
+      API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-api-endpoint" class="md-nav__link">
+    Choose API endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-api-key" class="md-nav__link">
+    Setup API Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-subscription" class="md-nav__link">
+    Events Subscription
+  </a>
+  
+    <nav class="md-nav" aria-label="Events Subscription">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#long-polling" class="md-nav__link">
+    Long Polling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-subscriber" class="md-nav__link">
+    Webhook Subscriber
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-subscriber" class="md-nav__link">
+    WebSocket Subscriber
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-watched-addresses" class="md-nav__link">
+    List watched addresses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watch-address" class="md-nav__link">
+    Watch address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-watch-addresses" class="md-nav__link">
+    Un-watch addresses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-events" class="md-nav__link">
+    Fetch events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Event Subscription
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Event Subscription" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Event Subscription
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../subscriber-webhook/" title="Webhook" class="md-nav__link">
+      Webhook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../subscriber-websocket/" title="WebSocket" class="md-nav__link">
+      WebSocket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-api-endpoint" class="md-nav__link">
+    Choose API endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-api-key" class="md-nav__link">
+    Setup API Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-subscription" class="md-nav__link">
+    Events Subscription
+  </a>
+  
+    <nav class="md-nav" aria-label="Events Subscription">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#long-polling" class="md-nav__link">
+    Long Polling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-subscriber" class="md-nav__link">
+    Webhook Subscriber
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websocket-subscriber" class="md-nav__link">
+    WebSocket Subscriber
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-watched-addresses" class="md-nav__link">
+    List watched addresses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watch-address" class="md-nav__link">
+    Watch address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-watch-addresses" class="md-nav__link">
+    Un-watch addresses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-events" class="md-nav__link">
+    Fetch events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="api">API</h1>
+<div class="admonition warning">
+<p class="admonition-title">Test Environment</p>
+<p>The Blockchain Sonar test environment is used by default in our API call examples.</p>
+<p>To use <code>curl</code> examples as-is, please export environment variable <code>YOUR_API_KEY</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">YOUR_API_KEY</span><span class="o">=</span><span class="s2">&quot;&lt;Your API key from Dashboard&gt;&quot;</span>
+</code></pre></div>
+
+</div>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="choose-api-endpoint">Choose API endpoint</h3>
+<p>See <a href="../#environments">Environments</a> section.</p>
+<h3 id="setup-api-key">Setup API Key</h3>
+<ol>
+<li>Create a Blockchain Sonar account (it is free of any charges) by clicking the Sign up button on Landing site and following the instructions. Account creation requires email confirmation to complete.</li>
+<li>Create a first API key from your account page on Dashboard site by clicking the <strong>Add new API key</strong> button in API Keys section.
+iuiip</li>
+</ol>
+<h2 id="events-subscription">Events Subscription</h2>
+<h4 id="long-polling">Long Polling</h4>
+<p>Use this method to receive incoming events using <a href="https://en.wikipedia.org/wiki/Push_technology#Long_polling">long polling</a> on a <a href="#fetch-events"><code>Fetch events</code></a> resource.</p>
+<h4 id="webhook-subscriber">Webhook Subscriber</h4>
+<p>Create a new Webhook subscriber for an API key by clicking the <strong>Add a Webhook Subscriber</strong> button to the right of the API key. Optionally, see for <a href="../subscriber-webhook">Webhook Subscriber Advanced Settings</a> to setup webhook authentication, retry policy, etc.</p>
+<h4 id="websocket-subscriber">WebSocket Subscriber</h4>
+<p>Create a new WebSocket subscriber for an API key by clicking the <strong>Add a WebSocket Subscriber</strong> button to the right of the API key. Optionally, see for <a href="../subscriber-websocket">WebSocket Subscriber Advanced Settings</a> to setup webhook authentication, retry policy, etc.</p>
+<h2 id="resources">Resources</h2>
+<h3 id="list-watched-addresses">List watched addresses</h3>
+<p>Using this resource you can list all addresses that you have created.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Filter by <code>currency</code>. Comma separated combination of currency acronyms like BTC, DASH, ETH, etc.</td>
+</tr>
+<tr>
+<td><strong>beforeId</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Request page before (newer) this pagination id. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+<tr>
+<td><strong>afterId</strong></td>
+<td>STRING</td>
+<td>NO</td>
+<td>Request page after (older) this pagination id. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+<tr>
+<td><strong>limit</strong></td>
+<td>INT</td>
+<td>NO</td>
+<td>Number of results per request. Default 500; max 1000. <a href="#pagination">Pagination's param</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request:</strong></p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">application/json</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>GET /v1/address HTTP/1.1
+Authorization: Bearer ${YOUR_API_KEY}
+Accept: application/json
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">text/csv</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>GET /v1/address HTTP/1.1
+Authorization: Bearer ${YOUR_API_KEY}
+Accept: text/csv
+</code></pre></div>
+
+</div>
+</div>
+<p><strong>Response:</strong></p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">application/json</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Type: application/json
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schemas.blockchain-sonar.com/v1/address/list/response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;before&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;after&quot;</span><span class="p">:</span> <span class="s2">&quot;/v1/address?currency=BTC&amp;afterId=48ed1d3f-3f16-4626-82f1-3bf62cdc7238&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;80c9e6a1-4bc6-4459-b09b-7a5c0226e85c&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-21T22:00:11.183Z&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;3ATtmYVkHbqpUsVdifZ9pe1BqhZMonHD7H&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2e924046-c6aa-40eb-89b4-7aacfd78cc0a&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-15T12:00:11.183Z&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;1738aQbJgGsQBHbhLqwX7MaBcjLY1PoDUf&quot;</span>
+        <span class="p">},</span>
+        <span class="err">...</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;48ed1d3f-3f16-4626-82f1-3bf62cdc7238&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-02T07:00:11.183Z&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;1GV8fYUqywhiy8nLxyRgyVnLbKurXDQgKC&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">text/csv</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Type: text/csv
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>id,at,currency,address
+80c9e6a1-4bc6-4459-b09b-7a5c0226e85c,2020-01-21T22:00:11.183Z,BTC,3ATtmYVkHbqpUsVdifZ9pe1BqhZMonHD7H
+2e924046-c6aa-40eb-89b4-7aacfd78cc0a,2020-01-15T12:00:11.183Z,BTC,1738aQbJgGsQBHbhLqwX7MaBcjLY1PoDUf
+...
+48ed1d3f-3f16-4626-82f1-3bf62cdc7238,2020-01-02T07:00:11.183Z,BTC,1GV8fYUqywhiy8nLxyRgyVnLbKurXDQgKC
+</code></pre></div>
+
+</div>
+</div>
+<p><strong>Examples:</strong></p>
+<div class="tabbed-set" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Curl</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>curl <span class="se">\</span>
+  --request GET <span class="se">\</span>
+  --header <span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">YOUR_API_KEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+  --header <span class="s2">&quot;Accept: application/json&quot;</span> <span class="se">\</span>
+  https://api.blockchain-sonar-test.com/v1/address?currency<span class="o">=</span>BTC<span class="p">&amp;</span><span class="nv">afterId</span><span class="o">=</span>48ed1d3f-3f16-4626-82f1-3bf62cdc7238
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>curl <span class="se">\</span>
+  --request GET <span class="se">\</span>
+  --header <span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">YOUR_API_KEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+  --header <span class="s2">&quot;Accept: text/csv&quot;</span> <span class="se">\</span>
+  https://api.blockchain-sonar-test.com/v1/address?currency<span class="o">=</span>BTC<span class="p">&amp;</span><span class="nv">afterId</span><span class="o">=</span>48ed1d3f-3f16-4626-82f1-3bf62cdc7238
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">TBD</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">TBD</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="watch-address">Watch address</h3>
+<p>By creating an address transaction notification, you will receive a notification after a new incoming or outgoing transaction happens and reaches a number of confirmations.</p>
+<p><strong>Request:</strong>
+<div class="highlight"><pre><span></span><code>POST /v1/address HTTP/1.1
+Content-Type: application/json
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schemas.blockchain-sonar.com/v1/address/watch/request.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;1GV8fYUqywhiy8nLxyRgyVnLbKurXDQgKC&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Response:</strong>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 201 OK
+Content-Type: application/json
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schemas.blockchain-sonar.com/v1/address/watch/response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;ddcb3c1a-2382-4a1e-961d-93090a3c22cb&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-02T07:00:11.183Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;1GV8fYUqywhiy8nLxyRgyVnLbKurXDQgKC&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Examples:</strong></p>
+<div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Curl</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>curl <span class="se">\</span>
+  --request POST <span class="se">\</span>
+  --header <span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">YOUR_API_KEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+  --header <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+  --header <span class="s2">&quot;Accept: application/json&quot;</span> <span class="se">\</span>
+  https://api.blockchain-sonar-test.com/v1/address <span class="se">\</span>
+  --data-binary <span class="se">\</span>
+<span class="o">{</span>
+  <span class="s2">&quot;currency&quot;</span>: <span class="s2">&quot;BTC&quot;</span>,
+  <span class="s2">&quot;address&quot;</span>:<span class="s2">&quot;1GV8fYUqywhiy8nLxyRgyVnLbKurXDQgKC&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">TBD</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">TBD</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="un-watch-addresses">Un-watch addresses</h3>
+<p>You can delete a watch address by address_id using this resource.</p>
+<p><strong>Request:</strong></p>
+<div class="highlight"><pre><span></span><code>DELETE /v1/address/{address_id} HTTP/1.1
+Authorization: Bearer ${YOUR_API_KEY}
+Accept: application/json
+</code></pre></div>
+
+<p><strong>Response:</strong>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 201 OK
+Content-Type: application/json
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schemas.blockchain-sonar.com/v1/address/unwatch/response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;70acf569-fe7a-4b94-803c-1c8d1aedb413&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-21T22:00:11.183Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;3Jv4X7t1NdzCk4nPt4qKbeZYLMta8iASG2&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Examples:</strong></p>
+<div class="tabbed-set" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Curl</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>curl <span class="se">\</span>
+  --request DELETE <span class="se">\</span>
+  --header <span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">YOUR_API_KEY</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
+  --header <span class="s2">&quot;Accept: application/json&quot;</span> <span class="se">\</span>
+  https://api.blockchain-sonar-test.com/v1/address/70acf569-fe7a-4b94-803c-1c8d1aedb413
+</code></pre></div>
+
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">TBD</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">TBD</span>
+</code></pre></div>
+
+</div>
+</div>
+<h3 id="fetch-events">Fetch events</h3>
+<p>We support API notification, and you can get notification messages from all addresses using this resource.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>currency</strong></td>
+<td>STRING</td>
+<td>YES</td>
+<td>Filter by <code>currency</code>. Comma separated combination of currency acronyms like BTC, DASH, ETH, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request:</strong>
+<div class="highlight"><pre><span></span><code>GET /v1/event?currency=BTC HTTP/1.1
+Authorization: Bearer ${YOUR_API_KEY}
+Accept: application/json
+</code></pre></div></p>
+<p><strong>Response:</strong>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Type: application/json
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schemas.blockchain-sonar.com/v1/address/fetch/response.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+    <span class="err">...</span>
+    <span class="err">TBD</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../blockchains-supported/" title="Blockchains Supported" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Blockchains Supported
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../subscriber-webhook/" title="Webhook" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Webhook
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
